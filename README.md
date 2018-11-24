@@ -11,7 +11,7 @@ Follow instructions from this learning guide: https://theblockchainu.com/guide/7
 To compile run the following command from your terminal.
 
 ```javascript
-$ truffle compile
+$ sudo truffle compile
 Compiling ./contracts/Migrations.sol...
 Compiling ./contracts/Openlab.sol...
 
@@ -23,7 +23,7 @@ Ignore any warnings that may show up as part of compiling the code for now.
 To migrate the compiled files to the blockchain, run the migrate command.
 
 ```javascript
-$ truffle migrate
+$ sudo truffle migrate
 Using network 'development'.
 
 Running migration: 1_initial_migration.js

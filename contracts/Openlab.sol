@@ -1,7 +1,8 @@
 pragma solidity 0.4.23;
 
 contract Openlab {
-	uint32 public totalClicks = 0;
+	uint256 public totalClicks = 0;
+	bytes32[] text;
 
 	function Openlab() public {}
 
@@ -9,9 +10,20 @@ contract Openlab {
 		totalClicks = totalClicks + 1;
 	}
 
-	function getClicks() public view returns (uint32) {
-		return totalClicks;
+	function removeClick() public {
+		totalClicks = totalClicks - 1;
 	}
 
+	function addText(bytes32 _text) {
+		require(_text != 0);
+		text.push(_text);
+	}
 
+	function getText() public view returns (bytes32[]) {
+		return text;
+	}
+
+	function getClicks() public view returns (uint256) {
+		return totalClicks;
+	}
 }
